@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bb-SampleWebApplication
+  name: myapp
   namespace: default
 spec:
   replicas: 1
@@ -14,13 +14,13 @@ spec:
         bb: web
     spec:
       containers:
-      - name: bb-site
-        image: SampleWebApplication:1.0
+      - name: bb-container
+        image: suyogkharage/samplewebapplication:firsttry
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: bb-entrypoint1
+  name: bb-service
   namespace: default
 spec:
   type: NodePort
