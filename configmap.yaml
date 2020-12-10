@@ -15,14 +15,24 @@ spec:
     spec:
       containers:
       - name: bb-container
-        image: suyogkharage/sampleconfigmap:v0
+        image: suyogkharage/envconfigmap:v0
         env:
         # Define the environment variable
-        - name: PORT
+        - name: TRANSFER
           valueFrom:
             configMapKeyRef:
               name: config-port-config
               key: Enable.ImageTransfer
+        - name: SHARING
+          valueFrom:
+            configMapKeyRef:
+              name: config-port-config
+              key: Enable.ImageSharing
+        - name: PATIENT
+          valueFrom:
+            configMapKeyRef:
+              name: config-port-config
+              key: Enable.Patient              
 ---
 apiVersion: v1
 kind: Service
