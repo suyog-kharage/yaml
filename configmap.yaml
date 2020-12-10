@@ -43,6 +43,6 @@ metadata:
   name: config-port-config
   namespace: default
 data:
-  EnableImageTransfer: "true"
-  EnableImageSharing: "false"
-  EnablePatient: "false"
+  Enable.ImageTransfer: "true"
+  Enable.ImageSharing: "false"
+  Enable.Patient: "false"
