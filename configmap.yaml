@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bb-container
-        image: suyogkharage/sampleapp:first
+        image: suyogkharage/sampleconfigmap:v0
         env:
         # Define the environment variable
         - name: PORT
