@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bb-container
-        image: suyogkharage/envconfigmap:v0
+        image: suyogkharage/configmapsvolume:v0
         volumeMounts:
         - name: config-volume
           mountPath: /etc/config	
