@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
       - name: bb-container
-        image: suyogkharage/xmlconfigmap:v0
+        image: suyogkharage/configmapxml:v0
         volumeMounts:
         - name: config-xml-volume
-          mountPath: /etc/config
+          mountPath: /etc/xmlconfig
       volumes:
       - name: config-xml-volume
         configMap:
