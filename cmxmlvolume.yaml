@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cmxmlvolumedeployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: web
+  template:
+    metadata:
+      labels:
+        bb: web
+    spec:
+      containers:
+      - name: bb-container
+        image: suyogkharage/configmapsvolume:v0
+        volumeMounts:
+        - name: config-xml-volume
+          mountPath: /etc/config
+      volumes:
+      - name: config-xml-volume
+        configMap:
+           name: xmlconfigmap
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cmxmlvolumeservice
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    bb: web
+  ports:
+  - port: 80
+    targetPort: 80
