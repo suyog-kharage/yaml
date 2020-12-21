@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataSources>
+  <add id="datasource1" type="type1" distance="1">
+    <parameters>
+      <name />
+      <address />
+      <otherIdentifiers>datasource1</otherIdentifiers>
+      <patientIdDomains />
+    </parameters>
+  </add>
+</dataSources>
